@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="card custom-card px-5">
+        <div class="card-body">
+          <h5 class="card-title text-center pb-2 pt-3">Welcome back !</h5>
+            <form class="form" [formGroup]="RegisterForm"  (ngSubmit)="send()"  >
+                <div class="form-group mt-4">
+                    <input formControlName="name" type="text"  placeholder="First name" [ngClass]="{'form-control mt-2 p-2 px-3': true, 'error': RegisterForm.controls['name'].invalid && RegisterForm.controls['name'].touched}">  
+                    @if(RegisterForm.controls['name'].invalid && RegisterForm.controls['name'].touched){
+                        <div class="error-message">Username is required Minimum 3 characters Maximum 20 characters</div>
+                    }
+                </div>
+
+                <div class="form-group mt-4">
+                    <input formControlName="lastname" type="text" placeholder="Last name" [ngClass]="{'form-control mt-2 p-2 px-3': true, 'error': RegisterForm.controls['lastname'].invalid && RegisterForm.controls['lastname'].touched}">
+                    @if(RegisterForm.controls['lastname'].invalid && RegisterForm.controls['lastname'].touched){
+                        <div class="error-message">Last name is required Minimum 3 characters Maximum 20 characters</div>
+                    }
+                </div>
+                
+                <div class="form-group mt-4">
+                    <input formControlName="email" type="email"  placeholder="E-mail" [ngClass]="{'form-control mt-2 p-2 px-3': true, 'error': RegisterForm.controls['email'].invalid && RegisterForm.controls['email'].touched}">
+                    @if(RegisterForm.controls['email'].invalid && RegisterForm.controls['email'].touched){
+                        <div class="error-message">Valid email is required.</div>
+                    }
+                </div>
+
+                <div class="form-group mt-4">
+                    <input formControlName="password" type="password"  placeholder="Password" [ngClass]="{'form-control mt-2 p-2 px-3': true, 'error': RegisterForm.controls['password'].invalid && RegisterForm.controls['password'].touched}">
+                    @if(RegisterForm.controls['password'].invalid && RegisterForm.controls['password'].touched){
+                        <div class="error-message">Password is required  Must contain uppercase, lowercase, number min length 6 and max length 20</div>
+                    }
+                </div>
+                <div  class="text-center mt-4 d-block">
+                    <button type="submit"  [disabled]="RegisterForm.invalid" >Register</button>
+                </div>
+
+                <div class="my-3">
+                    <p class="text-center my-2 pb-3 link">You you have an account ? <a href="" class="btn px-0">Login</a></p>
+                </div>
+            </form>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,89 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Backend uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Angular
+frontend/dist/
+frontend/.angular/
+frontend/tmp/
+frontend/out-tsc/
+frontend/bazel-out/
+frontend/.sass-cache/
+
+# Angular build artifacts
+frontend/dist-server/
+frontend/tmp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+*.lcov
+.nyc_output/
+lib-cov/
+
+# Build files
+build/
+dist/
+
+# Misc
+*.cache
+.eslintcache
+.parcel-cache
+.npm
+.yarn-integrity
+
+# MongoDB
+data/
+*.mongodb
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Editor backup files
+*~
