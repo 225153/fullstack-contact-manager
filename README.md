@@ -18,7 +18,7 @@ A modern, secure address book application that allows users to manage their pers
 
 ### Frontend
 
-- **Angular 19** - Modern TypeScript framework
+- **Angular 21** - Modern TypeScript framework
 - **RxJS** - Reactive programming
 - **TypeScript** - Type-safe development
 - **SweetAlert2** - Beautiful alert notifications
